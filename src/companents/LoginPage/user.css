@@ -1,0 +1,73 @@
+.border{
+    border:3px solid white !important;
+    color: white;
+}
+.border_2{
+    background:rgba(255, 255, 255, 0.118);
+    border:none;
+    border: 3px solid white;
+}
+.SelInp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+    margin-right:50%;
+    margin-bottom: 20px;
+}
+/* .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.Logincard{
+    background: rgba(255, 255, 255, 0.307);
+    padding: 0 4%;
+    border-radius:25px;
+    width: 350px;
+    height: 330px;
+    margin-left: -50px;
+  
+    
+}
+.loginInput{
+    width: 230px;
+    height: 30px;
+    margin-top: 8px;
+    border-radius: 12px;
+    font-size: 15px;
+    text-align: center;
+    outline:red;
+}
+.btn1{
+    width: 70px;
+    height: 35px;
+    background:white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 35%;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.btn1:hover{
+    background:red;
+    color:white;
+}
+.imgParol{
+    background: red;
+    margin-top: 10px;
+    margin-left: 32px;
+    border-radius: 50%;
+}
+
+
+
+.loginPage{
+    width: 100%;
+    height: 750px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

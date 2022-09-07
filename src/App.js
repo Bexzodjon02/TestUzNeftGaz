@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { Link, Outlet , useNavigate} from "react-router-dom";
+import { useEffect } from 'react';
 
 function App() {
+  
+  let navigate = useNavigate()
+  useEffect(()=>{
+    let auth = localStorage.getItem('keyAuth')
+       if (!auth) {
+          navigate('/login')
+       }
+  },[])
+  function exitSystem() {  
+    localStorage.clear()
+    navigate('/login')
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          <div>
+        <h2>Hello World</h2>
+        
+        <button onClick={()=> exitSystem()} className='loginga-qaytish' to={'/'}>Tizimdan chiqish</button><br/>
+        <Link to={'/examtest'} className='btn btn-success mx-3'>TESTGA KIRISH</Link>
+        
+    
+        </div>
+        <Outlet/>
     </div>
+    
   );
 }
 
